@@ -12,6 +12,9 @@ import dmacc.beans.Address;
 import dmacc.beans.Contact;
 import dmacc.repository.ContactRepository;
 
+import javax.sql.DataSource;
+import org.springframework.boot.jdbc.DataSourceBuilder;
+
 /**
  * @author abbyb
  *
@@ -32,5 +35,15 @@ public class BeanConfiguration {
 		Address bean = new Address("123 Main Street", "Des Moines", "IA");
 		return bean;
 	}
+	
+	@Bean
+    public DataSource getDataSource() {
+        return DataSourceBuilder.create()
+          .driverClassName("com.mysql.cj.jdbc.Driver")
+          .url("jdbc:mysql://localhost:3306/springcontacts?useSSL=false")
+          .username("root")
+          .password("My3girlz#5_1013")
+          .build();	
+    }
 	
 }

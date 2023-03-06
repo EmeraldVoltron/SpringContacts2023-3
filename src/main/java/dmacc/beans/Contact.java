@@ -2,7 +2,7 @@
  * CIS175 - Spring 2023
  * Feb 27, 2023
  */
-package beans;
+package dmacc.beans;
 
 import org.springframework.beans.factory.annotation.Autowired;
 

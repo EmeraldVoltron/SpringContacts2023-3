@@ -3,13 +3,14 @@
  * CIS175 - Spring 2023
  * Feb 27, 2023
  */
-package controller;
+package dmacc.controller;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import beans.Address;
-import beans.Contact;
+import dmacc.beans.Address;
+import dmacc.beans.Contact;
+import dmacc.repository.ContactRepository;
 
 /**
  * @author abbyb
